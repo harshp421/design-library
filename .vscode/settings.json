@@ -1,0 +1,17 @@
+{
+  // For standard functions like `clsx()` or `classNames()`
+  "tailwindCSS.classFunctions": ["clsx", "cva", "classNames"],
+
+  // For variables ending in "Classes" or similar naming conventions
+
+  "tailwindCSS.experimental.classRegex": [
+    "tv\\(([^)]*)\\)",
+    "['\"`]([^'\"`]*)['\"`]"
+  ]
+,
+
+  // Ensure quick suggestions are enabled for strings
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}

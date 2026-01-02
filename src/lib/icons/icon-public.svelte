@@ -1,0 +1,22 @@
+<script lang="ts">
+  import IconBase from "./icon-base.svelte";
+  const {
+    size = 24,
+    color = "currentColor",
+    className = "",
+    style = "",
+    ariaLabel = "public",
+    ...restProps
+  }: {
+    size?: number | string;
+    color?: string;
+    className?: string;
+    style?: string;
+    ariaLabel?: string;
+    restProps?: Record<string, any>;
+  } = $props();
+</script>
+
+<IconBase {size} {color} {className} {style} ariaLabel={ariaLabel} {...restProps}>
+  <path d="M5.33333 4.66667V3.33333C5.33333 2.97971 5.47381 2.64057 5.72386 2.39052C5.97391 2.14048 6.31304 2 6.66667 2H9.33333C9.68696 2 10.0261 2.14048 10.2761 2.39052C10.5262 2.64057 10.6667 2.97971 10.6667 3.33333V4.66667M8 8V8.00667M2 8.66667C3.86105 9.60446 5.91602 10.093 8 10.093C10.084 10.093 12.1389 9.60446 14 8.66667M2 6C2 5.64638 2.14048 5.30724 2.39052 5.05719C2.64057 4.80714 2.97971 4.66667 3.33333 4.66667H12.6667C13.0203 4.66667 13.3594 4.80714 13.6095 5.05719C13.8595 5.30724 14 5.64638 14 6V12C14 12.3536 13.8595 12.6928 13.6095 12.9428C13.3594 13.1929 13.0203 13.3333 12.6667 13.3333H3.33333C2.97971 13.3333 2.64057 13.1929 2.39052 12.9428C2.14048 12.6928 2 12.3536 2 12V6Z" />
+</IconBase>
