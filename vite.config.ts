@@ -1,10 +1,16 @@
-import tailwindcss from "@tailwindcss/vite";
-import { sveltekit } from "@sveltejs/kit/vite";
-import { defineConfig } from "vite";
+import tailwindcss from '@tailwindcss/vite';
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-  plugins: [tailwindcss(), sveltekit()],
-  define: {
-    "import.meta.env.SVELTE_RUNES": true,
-  },
+	plugins: [tailwindcss(), sveltekit()],
+
+	build: {
+		rollupOptions: {}
+	},
+	// Add this for Monaco workers
+	define: {
+		'process.env': {}
+	},
+	resolve: {}
 });
